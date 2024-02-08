@@ -12,7 +12,7 @@ const {hasWhiteSpaces, isLatin, isLatinWithDigits, isPersian, isPersianWithDigit
 const {validate} = require('./src/validate/validate');
 
 
-module.exports.swiftly ={
+module.exports ={
     color(){
         return colors()
     },
