@@ -1,6 +1,7 @@
 const {colors} = require('./src/color/index');
 const {badWords} = require('./src/badWords/index');
-const {bcrypt} = require('./src/bcrypt/bcrypt');
+const {bcrypt} = require('./src/encrypt/bcrypt');
+const {crypto} = require('./src/encrypt/crypto');
 const { country, state, city, iranCities } = require('./src/countryAPI/index');
 const {checkValidationsKeys, checkValidationsMap} = require('./src/express-validator/validator');
 const {cors, hsts, sign} = require('./src/middleware/index');
@@ -28,6 +29,14 @@ module.exports ={
        hash(password, salt){
        return bcrypt.hash(password, salt)
        }
+    },
+    crypto:{
+        encrypt(secret, string){
+            return crypto.encrypt(secret, string)
+        },
+        decrypt(secret, string){
+            return crypto.decrypt(secret, string)
+        }
     },
     countries:{
         country(){
