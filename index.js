@@ -44,12 +44,17 @@ module.exports.constants = {
 
 // /// Password
 
-module.exports.bcrypt = async(password, salt) =>{
-   return await bcrypt.hash(password, salt);
-}
-module.exports.compare = async(inputPussword, comparePasword) =>{
+module.exports.bcrypt = {
+    hash: async(password, salt)=>{
+        return await bcrypt.hash(password, salt);
+       
+    },
+    compare: async (inputPussword, comparePasword)=>{
     return await bcrypt.compare(inputPussword, comparePasword)
- }
+
+    }
+}
+
 
 /// ///////////////////////////////////////////////////////////////////////////////////////// expresjs methods
 module.exports.res400 = (res, err) => {
