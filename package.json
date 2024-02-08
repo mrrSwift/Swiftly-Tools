@@ -1,6 +1,6 @@
 {
   "name": "swiftly-tools",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Some tools for express.js",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,7 @@
     "web",
     "bcrypt"
   ],
+  "repository": "https://github.com/mrrSwift/Swift-Tools",
   "author": "Mr Swift",
   "license": "MIT",
   "dependencies": {
