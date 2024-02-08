@@ -26,4 +26,6 @@ module.exports.sign = (req, res, next) => {
     res.setHeader('X-Powered-By', "77 114 32 83 119 105 102 116")
     res.setHeader('X-Develop-By', "77 114 32 83 119 105 102 116")
 
+    next()
+
 }
