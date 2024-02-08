@@ -64,6 +64,6 @@ module.exports.res406 = (res, err) => {
 module.exports.res500 = (res, err) => {
     res.setHeader('Author', "Mr Swift")
     res.setHeader('X-Powered-By', "77 114 32 83 119 105 102 116")
-    res.setHeader('X-Develop-By', "77 114 32 83 119 105 102 116")
+    res.setHeader('X-Develop-By', "77 114 32 83 119 105 102 116") 
     return res.status(500).json({ message: err })
 }
