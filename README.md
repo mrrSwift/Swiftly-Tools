@@ -19,7 +19,7 @@ This tool helps you to shorten your code And it has a repository of different da
 
 ## Installation
 
-Install my-project with npm
+Install swiftly-tools with npm
 
 ```bash
   npm install swiftlly-tools
