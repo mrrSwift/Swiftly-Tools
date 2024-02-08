@@ -10,6 +10,8 @@ const rs = require('./src/response/responseServer');
 const {_sr} = require('./src/serverError/se');
 const {hasWhiteSpaces, isLatin, isLatinWithDigits, isPersian, isPersianWithDigits, removeWhiteSpace} = require('./src/string/string');
 const {validate} = require('./src/validate/validate');
+const {arrayIsEmpty} = require('./src/array/index');
+const {objectIsEmpty} = require('./src/object/index');
 
 
 module.exports ={
@@ -82,6 +84,12 @@ module.exports ={
     },
     rs,
     _sr,
+    array:{
+        arrayIsEmpty
+    },
+    object:{
+        objectIsEmpty
+    }
 
 }
 
