@@ -1,5 +1,5 @@
 {
-  "name": "swift-tools",
+  "name": "swiftly-tools",
   "version": "1.0.0",
   "description": "Some tools for express.js",
   "main": "index.js",
