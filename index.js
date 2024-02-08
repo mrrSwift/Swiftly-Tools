@@ -3,13 +3,13 @@ const {badWords} = require('./src/badWords/index');
 const {bcrypt} = require('./src/bcrypt/bcrypt');
 const { country, state, city, iranCities } = require('./src/countryAPI/index');
 const {checkValidationsKeys, checkValidationsMap} = require('./src/express-validator/validator');
-const {cros, hsts, sign} = require('./src/middleware/index');
+const {cors, hsts, sign} = require('./src/middleware/index');
 const {generateRandomDigits, generateRandomDigitsInRangeOf} = require('./src/number/number');
 const {checkMobileNumber, checkNationalCode, nameOptimizer, normalizeMobileNumber} = require('./src/region/iran');
 const rs = require('./src/response/responseServer');
 const {_sr} = require('./src/serverError/se');
 const {hasWhiteSpaces, isLatin, isLatinWithDigits, isPersian, isPersianWithDigits, removeWhiteSpace} = require('./src/string/string');
-const {Validate} = require('./src/validate/validate');
+const {validate} = require('./src/validate/validate');
 
 
 module.exports.swiftly ={
@@ -27,6 +27,61 @@ module.exports.swiftly ={
        return bcrypt.hash(password, salt)
        }
     },
+    countries:{
+        country(){
+            return country()
+        },
+        state(){
+            return state()
+        },
+        city(){
+            return city()
+        },
+        iranCities(){
+            return iranCities()
+        }
+
+    },
+    expressValidation:{
+        keys(validations){
+            return checkValidationsKeys(validations)
+        },
+        maps(validations){
+            return checkValidationsMap(validations)
+        }
+    },
+    middleware:{
+        cors(req, res, next){
+            return cors(req, res, next)
+        },
+        hsts(req, res, next){
+            return hsts(req, res, next)
+        },
+        sign(req, res, next){
+            return sign(req, res, next)
+        }
+    },
+    number:{
+        randomDigits(length){
+            return generateRandomDigits(length)
+
+        },
+        randomDigitsInRange(max){
+            return generateRandomDigitsInRangeOf(max)
+
+        }
+    },
+    string:{
+        hasWhiteSpaces, isLatin, isLatinWithDigits, isPersian, isPersianWithDigits, removeWhiteSpace
+    },
+    validate,
+    region:{
+        iran:{
+            checkMobileNumber, checkNationalCode, nameOptimizer, normalizeMobileNumber
+        }
+    },
+    rs,
+    _sr,
 
 }
 

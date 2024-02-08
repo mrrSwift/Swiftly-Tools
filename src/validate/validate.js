@@ -1,5 +1,5 @@
 // /// validate Data
-module.exports.Validate = {
+module.exports.validate = {
     slug(data){
        return /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(data)
     },
