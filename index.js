@@ -13,6 +13,7 @@ const {hasWhiteSpaces, isLatin, isLatinWithDigits, isPersian, isPersianWithDigit
 const {validate} = require('./src/validate/validate');
 const {arrayIsEmpty} = require('./src/array/index');
 const {objectIsEmpty} = require('./src/object/index');
+const {utils} = require('./src/utils/index');
 
 
 module.exports ={
@@ -98,7 +99,8 @@ module.exports ={
     },
     object:{
         objectIsEmpty
-    }
+    },
+    utils,
 
 }
 

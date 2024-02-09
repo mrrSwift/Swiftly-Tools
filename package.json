@@ -10,7 +10,8 @@
     "Express",
     "Validate",
     "web",
-    "bcrypt"
+    "bcrypt",
+    "crypto"
   ],
   "repository": "https://github.com/mrrSwift/Swift-Tools",
   "author": "Mr Swift",
