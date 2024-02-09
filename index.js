@@ -1,4 +1,4 @@
-const {colors} = require('./src/color/index');
+const {colors, rgbToHex} = require('./src/color/index');
 const {badWords} = require('./src/badWords/index');
 const {bcrypt} = require('./src/encrypt/bcrypt');
 const {crypto} = require('./src/encrypt/crypto');
@@ -14,11 +14,12 @@ const {validate} = require('./src/validate/validate');
 const {arrayIsEmpty} = require('./src/array/index');
 const {objectIsEmpty} = require('./src/object/index');
 const {utils} = require('./src/utils/index');
-
+  
 
 module.exports ={
-    color(){
-        return colors()
+    color:{
+        colors,
+        rgbToHex
     },
     badWords(){
        return badWords()

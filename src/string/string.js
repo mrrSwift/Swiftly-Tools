@@ -22,3 +22,11 @@ module.exports.isLatinWithDigits = str => {
 module.exports.hasWhiteSpaces = str => {
     return str.includes(' ')
 }
+
+module.exports.reverseString = str =>{
+    return str.split("").reverse().join("");
+}
+
+module.exports.capString = str => {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
