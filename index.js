@@ -1,4 +1,4 @@
-const {colors, rgbToHex} = require('./src/color/index');
+const {colors, rgbToHex, randomHex} = require('./src/color/index');
 const {badWords} = require('./src/badWords/index');
 const {bcrypt} = require('./src/encrypt/bcrypt');
 const {crypto} = require('./src/encrypt/crypto');
@@ -9,7 +9,7 @@ const {generateRandomDigits, generateRandomDigitsInRangeOf} = require('./src/num
 const {checkMobileNumber, checkNationalCode, nameOptimizer, normalizeMobileNumber} = require('./src/region/iran');
 const rs = require('./src/response/responseServer');
 const {_sr} = require('./src/serverError/se');
-const {hasWhiteSpaces, isLatin, isLatinWithDigits, isPersian, isPersianWithDigits, removeWhiteSpace} = require('./src/string/string');
+const {string} = require('./src/string/string');
 const {validate} = require('./src/validate/validate');
 const {arrayIsEmpty} = require('./src/array/index');
 const {objectIsEmpty} = require('./src/object/index');
@@ -19,7 +19,8 @@ const {utils} = require('./src/utils/index');
 module.exports ={
     color:{
         colors,
-        rgbToHex
+        rgbToHex,
+        randomHex
     },
     badWords(){
        return badWords()
@@ -84,9 +85,7 @@ module.exports ={
 
         }
     },
-    string:{
-        hasWhiteSpaces, isLatin, isLatinWithDigits, isPersian, isPersianWithDigits, removeWhiteSpace
-    },
+    string,
     validate,
     region:{
         iran:{
