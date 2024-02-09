@@ -1,21 +1,19 @@
-const {colors, rgbToHex, randomHex} = require('./src/color/index');
-const {badWords} = require('./src/badWords/index');
+const {colors, rgbToHex, randomHex} = require('./src/color');
+const {badWords} = require('./src/badWords');
+const { country, state, city, iranCities } = require('./src/countryAPI');
+const {expressValidation} = require('./src/express-validator');
+const {middleware} = require('./src/middleware');
+const {number} = require('./src/number');
+const rs = require('./src/response');
+const {_sr} = require('./src/serverError');
+const {string} = require('./src/string');
+const {validate} = require('./src/validate');
+const {arrayIsEmpty} = require('./src/array');
+const {objectIsEmpty} = require('./src/object');
+const {utils} = require('./src/utils');
 const {bcrypt} = require('./src/encrypt/bcrypt');
-const {crypto} = require('./src/encrypt/crypto');
-const { country, state, city, iranCities } = require('./src/countryAPI/index');
-const {checkValidationsKeys, checkValidationsMap} = require('./src/express-validator/validator');
-const {cors, hsts, sign} = require('./src/middleware/index');
-const {generateRandomDigits, generateRandomDigitsInRangeOf} = require('./src/number/number');
-const {checkMobileNumber, checkNationalCode, nameOptimizer, normalizeMobileNumber} = require('./src/region/iran');
-const rs = require('./src/response/responseServer');
-const {_sr} = require('./src/serverError/se');
-const {string} = require('./src/string/string');
-const {validate} = require('./src/validate/validate');
-const {arrayIsEmpty} = require('./src/array/index');
-const {objectIsEmpty} = require('./src/object/index');
-const {utils} = require('./src/utils/index');
-  
-
+const {crypto} = require('./src/encrypt/crypto');  
+const {iran} = require('./src/region');
 module.exports ={
     color:{
         colors,
@@ -25,22 +23,8 @@ module.exports ={
     badWords(){
        return badWords()
     },
-    bcrypt:{
-       compare(input, current){
-       return bcrypt.compare(input, current)
-       },
-       hash(password, salt){
-       return bcrypt.hash(password, salt)
-       }
-    },
-    crypto:{
-        encrypt(secret, string){
-            return crypto.encrypt(secret, string)
-        },
-        decrypt(secret, string){
-            return crypto.decrypt(secret, string)
-        }
-    },
+    bcrypt,
+    crypto,
     countries:{
         country(){
             return country()
@@ -56,41 +40,13 @@ module.exports ={
         }
 
     },
-    expressValidation:{
-        keys(validations){
-            return checkValidationsKeys(validations)
-        },
-        maps(validations){
-            return checkValidationsMap(validations)
-        }
-    },
-    middleware:{
-        cors(req, res, next){
-            return cors(req, res, next)
-        },
-        hsts(req, res, next){
-            return hsts(req, res, next)
-        },
-        sign(req, res, next){
-            return sign(req, res, next)
-        }
-    },
-    number:{
-        randomDigits(length){
-            return generateRandomDigits(length)
-
-        },
-        randomDigitsInRange(max){
-            return generateRandomDigitsInRangeOf(max)
-
-        }
-    },
+    expressValidation,
+    middleware,
+    number,
     string,
     validate,
     region:{
-        iran:{
-            checkMobileNumber, checkNationalCode, nameOptimizer, normalizeMobileNumber
-        }
+        iran
     },
     rs,
     _sr,
