@@ -49,6 +49,11 @@ swiftly.string.isLatin(str) // true
 app.use(swiftly.middleware.cors)
 ```
 
+## Improve
+
+If you have an idea, you can inform us through GitHub issues section, and if you have the ability to upgrade the library, we will be happy to help us.
+
+
 ## Docs
 
 Coming soon...!
