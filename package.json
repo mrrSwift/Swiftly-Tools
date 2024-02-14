@@ -18,6 +18,7 @@
   "author": "Mr Swift",
   "license": "MIT",
   "dependencies": {
-    "bcrypt": "^5.1.1"
+    "bcrypt": "^5.1.1",
+    "mongoose": "^8.1.2"
   }
 }
