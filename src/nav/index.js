@@ -1,13 +1,14 @@
 
 module.exports={
-    pagePagination:(counter)=>{
+    pagePagination:(counter, item)=>{
         let page ;
-        if(counter == 1){
+        if(counter == 1 || counter == 0 || !counter){
+            
          return 0
       
         }else{
           page = counter
-          return page * 10 -10
+          return (page * item) - item
         }
     },
     itemPagination:(counter, item)=>{

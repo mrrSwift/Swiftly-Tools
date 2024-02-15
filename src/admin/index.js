@@ -1,7 +1,7 @@
 const ejs = require('ejs')
 const mongoose = require('mongoose')
 let Model
-
+const { pagePagination } = require('../nav')
 
 module.exports = async(req, res) => {
     const modelsName = mongoose.modelNames();
@@ -13,17 +13,17 @@ module.exports = async(req, res) => {
     switch (req.query?.type) {
         case 'edit':
             Model.findOneAndUpdate(
-                req.body.search,
+                req.body?.search,
                 req.body.update,
                 { new: true }
             ).then((data)=>{
                 ejs.renderFile('./views/index.ejs', { modelsName, data }, options, function (err, str) {
-                    // str => Rendered HTML string
+                    res.send(str)
                 });
             }).catch((err)=>{
                 console.log(err)
                 ejs.renderFile('./views/index.ejs', { modelsName, data: {}, err }, options, function (err, str) {
-                    // str => Rendered HTML string
+                    res.send(str)
                 });
             })
             break;
@@ -34,35 +34,35 @@ module.exports = async(req, res) => {
             { new: true }
         ).then((data)=>{
             ejs.renderFile('./views/index.ejs', { modelsName, data }, options, function (err, str) {
-                // str => Rendered HTML string
+                res.send(str)
             });
         }).catch((err)=>{
             console.log(err)
             ejs.renderFile('./views/index.ejs', { modelsName, data: {}, err }, options, function (err, str) {
-                // str => Rendered HTML string
+                res.send(str)
             });
         })
 
             break;
         case 'find':
             Model.findOne(
-                req.body.search,
+                req.body?.search,
                 { new: true }
-            ).then((data)=>{
+            ).skip(pagePagination(req.query?.page, req.query?.item)).limit(req.query?.item).then((data)=>{
                 ejs.renderFile('./views/index.ejs', { modelsName, data }, options, function (err, str) {
-                    // str => Rendered HTML string
+                    res.send(str)
                 });
             }).catch((err)=>{
                 console.log(err)
                 ejs.renderFile('./views/index.ejs', { modelsName, data: {}, err }, options, function (err, str) {
-                    // str => Rendered HTML string
+                    res.send(str)
                 });
             })
             break;
 
         default:
             ejs.renderFile('./views/index.ejs', { modelsName }, options, function (err, str) {
-                // str => Rendered HTML string
+                res.send(str)
             });
             break;
     }
