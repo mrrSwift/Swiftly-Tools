@@ -30,18 +30,52 @@ module.exports.utils = {
       throw new TypeError(`Expected a string but received a ${invalidType}`);
     }
   },
-  currency(currency){
+  currency(input) {
     if (typeof input === 'string') {
       return {
-         
+        format(separator = ",") {
+          return input.replace(/\B(?=(\d{3})+(?!\d))/g, separator);
+        },
+        prefix(symb, format = false) {
+          if (format) {
+            return symb + input.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+          } else {
+            return symb + input
+          }
+        },
+        postfix(symb, format = false) {
+          if (format) {
+            return input.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " " + symb
+          } else {
+            return input + " " + symb
+          }
+        }
+
       };
-  } else if (typeof input === 'number') {
-
-   
-
-  } else {
-    return null
-  }
+    } else if (typeof input === 'number') {
+      let number = input.toString();
+      return {
+        format(separator = ",") {
+          return number.replace(/\B(?=(\d{3})+(?!\d))/g, separator);
+        },
+        prefix(symb, format = false) {
+          if (format) {
+            return symb + number.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+          } else {
+            return symb + number
+          }
+        },
+        postfix(symb, format = false) {
+          if (format) {
+            return number.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " " + symb
+          } else {
+            return number + " " + symb
+          }
+        }
+      };
+    } else {
+      return null
+    }
   }
 
 }
