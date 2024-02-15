@@ -4,7 +4,6 @@ const { country, state, city, iranCities } = require('./src/countryAPI');
 const { expressValidation } = require('./src/express-validator');
 const { middleware } = require('./src/middleware');
 const { number } = require('./src/number');
-const rs = require('./src/response');
 const { _sr } = require('./src/serverError');
 const { string } = require('./src/string');
 const { validate } = require('./src/validate');
@@ -14,7 +13,11 @@ const { utils } = require('./src/utils');
 const { bcrypt } = require('./src/encrypt/bcrypt');
 const { crypto } = require('./src/encrypt/crypto');
 const { iran } = require('./src/region');
+const nav = require('./src/nav');
+const rs = require('./src/response');
+
 module.exports = {
+    nav,
     color,
     badWords,
     bcrypt,
