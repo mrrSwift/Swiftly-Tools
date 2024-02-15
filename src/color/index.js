@@ -1,4 +1,5 @@
 const colors = require('./Colors.json')
+const consoleColor = require('./ConsoleColor')
 
 module.exports.color = {
     colors () {
@@ -10,5 +11,8 @@ module.exports.color = {
     },
     randomHex () {
         return `#${Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, "0")}`;
-     }
+     },
+    console(text, color){
+        return consoleColor[color] + text + consoleColor.reset
+    }
 }

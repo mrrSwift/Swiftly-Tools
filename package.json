@@ -1,18 +1,25 @@
 {
   "name": "swiftly-tools",
-  "version": "1.2.1",
-  "description": "Some tools for web app",
+  "version": "1.2.2",
+  "description": "A complete tool to shorten code and speed up your coding, all in one",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "Express",
-    "Validate",
+    "express",
+    "validate",
     "web",
     "bcrypt",
     "crypto",
-    "utils"
+    "utils",
+    "web",
+    "color",
+    "console",
+    "strict-transport-security",
+    "x-powered-by",
+    "back-end",
+    ""
   ],
   "repository": "https://github.com/mrrSwift/Swift-Tools",
   "author": "Mr Swift",

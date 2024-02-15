@@ -1,14 +1,13 @@
 
 module.exports={
-    pagePagination:(page, limit)=>{
-        let page ;
-        if(page == 1 || page == 0 || !page){
+    pagePagination:(offset, limit)=>{
+     
+        if(offset == 1 || offset == 0 || !offset){
             
          return 0
       
         }else{
-          page = page
-          return (page * limit) - limit
+          return (offset * limit) - limit
         }
     },
     itemPagination:(offset, limit)=>{
