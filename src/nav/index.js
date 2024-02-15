@@ -1,17 +1,17 @@
 
 module.exports={
-    pagePagination:(counter, item)=>{
+    pagePagination:(page, limit)=>{
         let page ;
-        if(counter == 1 || counter == 0 || !counter){
+        if(page == 1 || page == 0 || !page){
             
          return 0
       
         }else{
-          page = counter
-          return (page * item) - item
+          page = page
+          return (page * limit) - limit
         }
     },
-    itemPagination:(counter, item)=>{
-        return counter * item
+    itemPagination:(offset, limit)=>{
+        return offset * limit
     }
 }
