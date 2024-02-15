@@ -40,6 +40,8 @@ const default_time_options = {
       withSeconds: /^(0?[1-9]|1[0-2]):([0-5][0-9]):([0-5][0-9]) (A|P)M$/,
     },
   };
+
+  
 module.exports.validate = {
     isSlug(data){
        return /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(data)
