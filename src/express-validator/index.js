@@ -1,5 +1,9 @@
 
     module.exports.expressValidation = {
+/** 
+*@param validationResult result of validation from express validator
+*@return Objects of missing fields with msg and error
+*/
       map  (validationResult)  {
         return (req, res, next) => {
             const errors = validationResult(req)
@@ -7,6 +11,10 @@
             else next()
         }
     },
+/** 
+*@param validationResult result of validation from express validator
+*@return Objects of missing fields like this { field name : msg }
+*/
       keys (validationResult)  {
         return (req, res, next) => {
           const errors = validationResult(req)

@@ -1,19 +1,21 @@
 
 
 module.exports.middleware = {
+/** 
+*@desc middleware fo set public cors
+*/
     cors(req, res, next) {
         res.setHeader('Access-Control-Allow-Origin', '*');
         res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
         res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, siteuser');
-        res.setHeader('Author', "Mr Swift")
-        res.setHeader('X-Powered-By', "77 114 32 83 119 105 102 116")
         res.setHeader('X-Develop-By', "77 114 32 83 119 105 102 116")
 
         next();
     },
+/** 
+*@desc set Strict-Transport-Security header
+*/
     hsts(req, res, next) {
-        res.setHeader('Author', "Mr Swift")
-        res.setHeader('X-Powered-By', "77 114 32 83 119 105 102 116")
         res.setHeader('X-Develop-By', "77 114 32 83 119 105 102 116")
         res.setHeader(
             "Strict-Transport-Security",
@@ -22,12 +24,17 @@ module.exports.middleware = {
 
         next();
     },
-    sign(req, res, next) {
-        res.setHeader('Author', "Mr Swift")
-        res.setHeader('X-Powered-By', "77 114 32 83 119 105 102 116")
-        res.setHeader('X-Develop-By', "77 114 32 83 119 105 102 116")
-
-        next()
-
+/** 
+*@param name 
+*@desc Set your name in Author header
+*/
+    sign(name){
+        return (req, res, next) => {
+            res.setHeader('Author', `${name}`)
+            res.setHeader('X-Powered-By', "77 114 32 83 119 105 102 116")
+            res.setHeader('X-Develop-By', "77 114 32 83 119 105 102 116")
+            next()
+    
+        }
     }
 }
