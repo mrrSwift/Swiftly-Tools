@@ -3,12 +3,22 @@ const bcrypt = require("bcrypt");
 
 
 module.exports.bcrypt = {
-    hash: async(password, salt)=>{
-        return await bcrypt.hash(password, salt);
+/** 
+*@param data Data you want to encrypt
+*@param salt 
+*@return hashed string
+*/
+    hash: async(data ="", salt= 10)=>{
+        return await bcrypt.hash(data, salt);
        
     },
-    compare: async (inputPussword, comparePasword)=>{
-    return await bcrypt.compare(inputPussword, comparePasword)
+/** 
+*@param inputData 
+*@param compareData 
+*@return Boolean value
+*/
+    compare: async (inputData = "", compareData = "")=>{
+    return await bcrypt.compare(inputData, compareData)
 
     }
 }
