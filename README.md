@@ -10,12 +10,10 @@ This tool helps you to shorten your code And it has a repository of different da
 
 ## Module for
 
--Express.js
-
--Mongoose.js
-
--Vue.js
-
+- Express.js
+- Mongoose.js
+- Vue
+- React
 
 ## Authors
 
