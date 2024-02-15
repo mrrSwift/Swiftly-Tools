@@ -1,6 +1,11 @@
 
   module.exports.object = {
-    objectIsEmpty (obj)  {
+/** 
+*@description Check obj and if obj is empty return true
+*@param obj 
+*@return Boolean value. if obj is empty return true
+*/
+    objectIsEmpty (obj = new Object(null))  {
       //If it's not an array, return FALSE.
       if (!Object.isFrozen(obj)) {
         return false;

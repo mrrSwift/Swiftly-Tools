@@ -2,10 +2,19 @@
 
 
 module.exports.number={
-    generateRandomDigitsInRangeOf (max) {
+
+     /** 
+    *@param max Max number
+    *@return Random number 
+    */
+    generateRandomDigitsInRangeOf (max= 100000) {
         return Math.floor(Math.random() * max) + 1
     },
-    generateRandomDigits (DIGITS_LENGTH)  {
+         /** 
+    *@param DIGITS_LENGTH 
+    *@return Random number with selected length
+    */
+    generateRandomDigits (DIGITS_LENGTH = 6)  {
       
             const add = 1
             let max = 12 - add // 12 is the min safe number Math.random() can generate without it starting to pad the end with zeros.

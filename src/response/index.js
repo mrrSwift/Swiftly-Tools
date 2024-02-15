@@ -20,50 +20,39 @@ module.exports.constants = {
 
 /// ///////////////////////////////////////////////////////////////////////////////////////// expresjs methods
 module.exports.res400 = (res, err) => {
-    res.setHeader('Author', "Mr Swift")
-    res.setHeader('X-Powered-By', "77 114 32 83 119 105 102 116")
     res.setHeader('X-Develop-By', "77 114 32 83 119 105 102 116")
     return res.status(400).json({ message: err })
 }
 
 module.exports.res401 = (res, err) => {
-    res.setHeader('Author', "Mr Swift")
-    res.setHeader('X-Powered-By', "77 114 32 83 119 105 102 116")
     res.setHeader('X-Develop-By', "77 114 32 83 119 105 102 116")
     return res.status(401).json({ message: err })
 }
 
 module.exports.res200 = (res, data) => {
-    res.setHeader('Author', "Mr Swift")
-    res.setHeader('X-Powered-By', "77 114 32 83 119 105 102 116")
     res.setHeader('X-Develop-By', "77 114 32 83 119 105 102 116")
     return res.status().json(data)
 }
 
 module.exports.res201 = (res, data) => {
-    res.setHeader('Author', "Mr Swift")
-    res.setHeader('X-Powered-By', "77 114 32 83 119 105 102 116")
     res.setHeader('X-Develop-By', "77 114 32 83 119 105 102 116")
     return res.status(404).json(data)
 }
 
 module.exports.res404 = (res, err) => {
-    res.setHeader('Author', "Mr Swift")
-    res.setHeader('X-Powered-By', "77 114 32 83 119 105 102 116")
+
     res.setHeader('X-Develop-By', "77 114 32 83 119 105 102 116")
     return res.status(404).json({ message: err })
 }
 
 module.exports.res406 = (res, err) => {
-    res.setHeader('Author', "Mr Swift")
-    res.setHeader('X-Powered-By', "77 114 32 83 119 105 102 116")
+
     res.setHeader('X-Develop-By', "77 114 32 83 119 105 102 116")
     return res.status(406).json({ message: err })
 }
 
 module.exports.res500 = (res, err) => {
-    res.setHeader('Author', "Mr Swift")
-    res.setHeader('X-Powered-By', "77 114 32 83 119 105 102 116")
+
     res.setHeader('X-Develop-By', "77 114 32 83 119 105 102 116") 
     return res.status(500).json({ message: err })
 }

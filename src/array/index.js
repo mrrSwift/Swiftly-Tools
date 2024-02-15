@@ -1,7 +1,7 @@
 
 module.exports.array = {
   /** 
-*@desc Check Array and if array is empty return true
+*@description Check Array and if array is empty return true
 *@param array 
 *@return Boolean value. if array is empty return true
 */
@@ -19,7 +19,7 @@ module.exports.array = {
     return false;
   },
     /** 
-*@desc Sort array with bubble sort algo
+*@description Sort array with bubble sort algo
 *@param array 
 *@return Swapped array
 */

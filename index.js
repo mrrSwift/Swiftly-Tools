@@ -4,7 +4,7 @@ const { country, state, city, iranCities } = require('./src/countryAPI');
 const { expressValidation } = require('./src/express-validator');
 const { middleware } = require('./src/middleware');
 const { number } = require('./src/number');
-const { _sr } = require('./src/serverError');
+const { sr } = require('./src/serverError');
 const { string } = require('./src/string');
 const { validate } = require('./src/validate');
 const { array } = require('./src/array');
@@ -15,7 +15,17 @@ const { crypto } = require('./src/encrypt/crypto');
 const { iran } = require('./src/region');
 const nav = require('./src/nav');
 const rs = require('./src/response');
-
+/**
+ * @author Mr Swift
+ * @name Swiftly
+ * @returns Objects of tools
+ * @version 1.2.3
+ * @license MIT
+ * @items nav | color | badwords | crypto 
+ *  expressValidation | middleware | number 
+ *  string | validate | rs | sr | array 
+ *  object | utils | region | countries
+ */
 module.exports = {
     nav,
     color,
@@ -27,8 +37,15 @@ module.exports = {
     number,
     string,
     validate,
+    /**
+     * @description express response with status
+     */
     rs,
-    _sr,
+    /**
+     * @description server response | Objects of msg in different languages
+     * 
+     */
+    sr,
     array,
     object,
     utils,

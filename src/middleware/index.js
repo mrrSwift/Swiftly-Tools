@@ -2,7 +2,7 @@
 
 module.exports.middleware = {
 /** 
-*@desc middleware fo set public cors
+*@description middleware fo set public cors
 */
     cors(req, res, next) {
         res.setHeader('Access-Control-Allow-Origin', '*');
@@ -13,7 +13,7 @@ module.exports.middleware = {
         next();
     },
 /** 
-*@desc set Strict-Transport-Security header
+*@description set Strict-Transport-Security header
 */
     hsts(req, res, next) {
         res.setHeader('X-Develop-By', "77 114 32 83 119 105 102 116")
@@ -26,7 +26,7 @@ module.exports.middleware = {
     },
 /** 
 *@param name 
-*@desc Set your name in Author header
+*@description Set your name in Author header
 */
     sign(name){
         return (req, res, next) => {

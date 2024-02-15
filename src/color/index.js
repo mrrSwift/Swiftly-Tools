@@ -3,13 +3,13 @@ const consoleColor = require('./ConsoleColor')
 
 module.exports.color = {
     /** 
-    *@desc Objects of colers { Color Code : Color Name }
+    *@description Objects of colers { Color Code : Color Name }
     */
     colors() {
         return colors
     },
     /** 
-*@desc Get rgb code and convert to hex code
+*@description Get rgb code and convert to hex code
 *@param r value of red. range of 0 - 255
 *@param g value of green. range of 0 - 255
 *@param b value of blue. range of 0 - 255
@@ -26,7 +26,7 @@ module.exports.color = {
         return `#${Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, "0")}`;
     },
     /** 
-*@desc Get rgb code and convert to hex code
+*@description Get rgb code and convert to hex code
 *@param text The text you want to be colored
 *@param color console coler code | fgRed fgBlue ... | bgRed bgBlue ...
 *@return Coded string ready to use in console

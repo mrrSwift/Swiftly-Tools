@@ -1,4 +1,4 @@
-module.exports._sr = {
+module.exports.sr = {
     fa: {
         required: {
             token: 'توکن را وارد کنید',
