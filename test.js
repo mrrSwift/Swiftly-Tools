@@ -1,0 +1,1 @@
+const ev = require('./index').expressValidation;

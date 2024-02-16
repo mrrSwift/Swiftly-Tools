@@ -26,7 +26,6 @@ const rs = require('./src/response');
  *  object | utils | region | countries
  */
 module.exports = {
-    nav,
     color,
     badWords,
     bcrypt,
@@ -36,17 +35,10 @@ module.exports = {
     number,
     string,
     validate,
-    /**
-     * @description express response with status
-     */
-    rs,
-    /**
-     * @description server response | Objects of msg in different languages
-     */
-    sr,
     array,
     object,
     utils,
+    nav,
     region: {
         iran
     },
@@ -65,5 +57,13 @@ module.exports = {
         }
 
     },
+     /**
+     * @description express response with status
+     */
+     rs,
+     /**
+      * @description server response | Objects of msg in different languages
+      */
+     sr,
 }
 
