@@ -43,7 +43,6 @@ module.exports = {
     rs,
     /**
      * @description server response | Objects of msg in different languages
-     * 
      */
     sr,
     array,
