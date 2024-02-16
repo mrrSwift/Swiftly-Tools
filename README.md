@@ -22,10 +22,10 @@ This tool helps you to shorten your code And it has a repository of different da
 
 ## Installation
 
-Install swiftly-tools with npm
+Install [swiftly-tools](https://www.npmjs.com/package/swiftly-tools) with npm
 
 ```bash
-  npm install swiftlly-tools
+  npm i swiftly-tools
 ```
 
 ```js
