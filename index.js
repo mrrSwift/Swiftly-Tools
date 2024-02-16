@@ -19,7 +19,6 @@ const rs = require('./src/response');
  * @author Mr Swift
  * @name Swiftly
  * @returns Objects of tools
- * @version 1.2.3
  * @license MIT
  * @items nav | color | badwords | crypto 
  *  expressValidation | middleware | number 
