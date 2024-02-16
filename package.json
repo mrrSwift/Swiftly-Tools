@@ -1,6 +1,6 @@
 {
   "name": "swiftly-tools",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "A complete tool to shorten code and speed up your coding, all in one",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,9 @@
     ""
   ],
   "repository": "https://github.com/mrrSwift/Swift-Tools",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "author": "Mr Swift",
   "license": "MIT",
   "dependencies": {
