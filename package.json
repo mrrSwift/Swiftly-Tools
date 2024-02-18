@@ -1,10 +1,10 @@
 {
   "name": "swiftly-tools",
-  "version": "1.2.7",
+  "version": "1.2.71",
   "description": "A complete tool to shorten code and speed up your coding, all in one",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "keywords": [
     "express",
@@ -18,7 +18,8 @@
     "console",
     "strict-transport-security",
     "x-powered-by",
-    "back-end"
+    "back-end",
+    "gsap"
   ],
   "repository": "https://github.com/mrrSwift/Swiftly-Tools",
   "publishConfig": {

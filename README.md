@@ -14,6 +14,7 @@ This tool helps you to shorten your code And it has a repository of different da
 - Mongoose.js
 - Vue
 - React
+- gsap
 
 ## Authors
 
@@ -73,5 +74,5 @@ If you have an idea, you can inform us through GitHub issues section, and if you
 
 ## Docs
 
-[here...!](https://mrrswift.github.io/Swiftly-Tools/)
+[Here...!](https://mrrswift.github.io/Swiftly-Tools/)
 
