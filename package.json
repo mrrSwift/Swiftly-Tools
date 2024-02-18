@@ -1,6 +1,6 @@
 {
   "name": "swiftly-tools",
-  "version": "1.2.61",
+  "version": "1.2.7",
   "description": "A complete tool to shorten code and speed up your coding, all in one",
   "main": "index.js",
   "scripts": {
@@ -18,8 +18,7 @@
     "console",
     "strict-transport-security",
     "x-powered-by",
-    "back-end",
-    ""
+    "back-end"
   ],
   "repository": "https://github.com/mrrSwift/Swiftly-Tools",
   "publishConfig": {

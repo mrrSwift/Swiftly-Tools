@@ -1,9 +1,12 @@
 Collection of tools and data for speed up your coding and enhance code 
 
-Can be used in express, vue, react, mongoose and any web app
+Can be used in express, vue, react, gsap, mongoose and any web app
 
 ## Modules
-
+- gsap
+  - from
+  - anime
+  - scrollTrigger
 - color
   - colors
   - rgbToHex

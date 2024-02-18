@@ -13,6 +13,7 @@ const { utils } = require('./src/utils');
 const { bcrypt } = require('./src/encrypt/bcrypt');
 const { crypto } = require('./src/encrypt/crypto');
 const { iran } = require('./src/region');
+const gsap = require('./src/gsap');
 const nav = require('./src/nav');
 const rs = require('./src/response');
 /**
@@ -23,7 +24,7 @@ const rs = require('./src/response');
  * @items nav | color | badwords | crypto 
  *  expressValidation | middleware | number 
  *  string | validate | rs | sr | array 
- *  object | utils | region | countries
+ *  object | utils | region | countries | gsap
  */
 module.exports = {
     color,
@@ -39,6 +40,7 @@ module.exports = {
     object,
     utils,
     nav,
+    gsap,
     region: {
         iran
     },
