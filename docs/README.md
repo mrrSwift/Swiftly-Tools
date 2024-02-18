@@ -34,6 +34,7 @@ Can be used in express, vue, react, mongoose and any web app
   - isPersianWithDigits
   - isPersian
   - removeWhiteSpaces
+  - assertString
 - validate
   - isSlug
   - isUrl
@@ -52,13 +53,12 @@ Can be used in express, vue, react, mongoose and any web app
   - bubbleSort
 - object
   - objectIsEmpty
+  - merge
 - utils
   - sleep
   - log
   - celsiusToFahrenheit
   - fahrenheitToCelsius
-  - merge
-  - assertString
   - currency
     - format
     - prefix

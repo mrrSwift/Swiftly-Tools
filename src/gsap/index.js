@@ -1,43 +1,92 @@
 module.exports = {
 
     readyToUse:{
-        fade_from_bottom: {
+        fadeFromBottom: {
             y: 180,
             opacity: 0,
         },
-        fade_from_top: {
+        fadeFromTop: {
             y: -180,
             opacity: 0,
         },
-        fade_from_left: {
+        fadeFromLeft: {
             x: -180,
             opacity: 0,
         },
-        fade_from_right: {
+        fadeFromRight: {
             x: 180,
             opacity: 0,
         },
-        fade_in: {
+        fadeIn: {
             opacity: 0,
         },
-        rotate_up: {
+        rotateUp: {
             y: 180,
             rotation: 10,
             opacity: 0,
         },
-        rotate_xy_right: {
+        rotateUpRight: {
             y: 180,
             x: -180,
             rotation: -20,
             opacity: 0,
         },
-        rotate_xy_left: {
+        rotateUpLeft: {
             y: 180,
             x: 180,
             rotation: 20,
             opacity: 0,
         },
     },
-    
+    anime(defaults = {}){
+        let obj = defaults;
+
+        obj.x = (v)=>{
+            obj.x = v;
+            return obj;
+        }
+
+        obj.y = (v)=>{
+            obj.y = v;
+            return obj;
+        }
+
+        obj.rotation = (v)=>{
+            obj.rotation = v;
+            return obj;
+        }
+
+        obj.ease = (v)=>{
+            obj.ease = v;
+            return obj;
+        }
+
+        obj.delay = (v)=>{
+            obj.delay = v;
+            return obj;
+        }
+
+        obj.duration = (v)=>{
+            obj.duration = v;
+            return obj;
+        }
+
+        obj.stagger = (v)=>{
+            obj.stagger = v;
+            return obj;
+        }
+
+        obj.scale = (v)=>{
+            obj.scale = v;
+            return obj;
+        }
+        return obj;
+    },
+    scrollTrigger(defaults = {}){
+        let obj = defaults;
+
+        
+
+    }
 
 }
