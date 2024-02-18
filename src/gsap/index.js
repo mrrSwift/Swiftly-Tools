@@ -1,6 +1,6 @@
 module.exports = {
 
-    readyToUse:{
+    from:{
         fadeFromBottom: {
             y: 180,
             opacity: 0,
@@ -19,6 +19,10 @@ module.exports = {
         },
         fadeIn: {
             opacity: 0,
+        },
+        fadeScaleIn: {
+            opacity: 0,
+            scale:0
         },
         rotateUp: {
             y: 180,
@@ -85,6 +89,50 @@ module.exports = {
     scrollTrigger(defaults = {}){
         let obj = defaults;
 
+        obj.trigger = (v)=>{
+            obj.trigger = v;
+            return obj;
+        }
+
+        obj.pin = (v)=>{
+            obj.pin = v;
+            return obj;
+        }
+
+        obj.start = (v)=>{
+            obj.start = v;
+            return obj;
+        }
+
+        obj.scrub = (v)=>{
+            obj.scrub = v;
+            return obj;
+        }
+
+        obj.markers = (v)=>{
+            obj.markers = v;
+            return obj;
+        }
+
+        obj.once = (v)=>{
+            obj.once = v;
+            return obj;
+        }
+
+        obj.toggleActions = (v)=>{
+            obj.toggleActions = v;
+            return obj;
+        }
+
+        obj.end = (v)=>{
+            obj.end = v;
+            return obj;
+        }
+
+        obj.snap = (v)=>{
+            obj.snap = v;
+            return obj;
+        }
         
 
     }
