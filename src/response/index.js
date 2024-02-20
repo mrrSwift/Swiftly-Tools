@@ -1,4 +1,4 @@
-// /// Response Code
+
 
 module.exports.constants = {
     Validation_Error: 400,
@@ -18,7 +18,6 @@ module.exports.constants = {
   
 
 
-/// ///////////////////////////////////////////////////////////////////////////////////////// expresjs methods
 module.exports.res400 = (res, err) => {
     res.setHeader('X-Develop-By', "77 114 32 83 119 105 102 116")
     return res.status(400).json({ message: err })
