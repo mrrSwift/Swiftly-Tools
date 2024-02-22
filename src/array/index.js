@@ -18,7 +18,7 @@ module.exports.array = {
     //Otherwise, return FALSE.
     return false;
   },
-    /** 
+  /** 
 *@description Sort array with bubble sort algo
 *@param array 
 *@return Swapped array
