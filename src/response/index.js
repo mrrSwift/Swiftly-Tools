@@ -8,14 +8,14 @@ module.exports.constants = {
     Server_Error: 500,
     Site_Unauthorized: 422,
     Too_Many: 429,
-    Continue:100,
-    OK:200,
-    Created:201,
-    Accepted:202,
-    Found:302,
-    Moved_Permanently:301
-  };
-  
+    Continue: 100,
+    OK: 200,
+    Created: 201,
+    Accepted: 202,
+    Found: 302,
+    Moved_Permanently: 301
+};
+
 
 
 module.exports.res400 = (res, err) => {
@@ -52,6 +52,6 @@ module.exports.res406 = (res, err) => {
 
 module.exports.res500 = (res, err) => {
 
-    res.setHeader('X-Develop-By', "77 114 32 83 119 105 102 116") 
+    res.setHeader('X-Develop-By', "77 114 32 83 119 105 102 116")
     return res.status(500).json({ message: err })
 }
