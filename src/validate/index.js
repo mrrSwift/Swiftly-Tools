@@ -131,10 +131,10 @@ module.exports.validate = {
     if (!version) {
       return isIP(str, 4) || isIP(str, 6);
     }
-    if (version =='4') {
+    if (version == '4') {
       return IPv4AddressRegExp.test(str);
     }
-    if (version =='6') {
+    if (version == '6') {
       return IPv6AddressRegExp.test(str);
     }
     return false;
@@ -173,6 +173,31 @@ module.exports.validate = {
     }
 
     return dotSplit.reduce((acc, currElem) => acc && this.isBase64(currElem, { urlSafe: true }), true);
+  },
+  /**
+   * 
+   * @param {*} variable 
+   * @returns Boolean value
+   */
+  isEmpty(variable) {
+    if (variable === null || variable === undefined) {
+      return true;
+    }
+
+    if (typeof variable === 'string' && variable.trim() === '') {
+      return true;
+    }
+
+    if (Array.isArray(variable) && variable.length === 0) {
+      return true;
+    }
+
+    if (typeof variable === 'object' && Object.keys(variable).length === 0) {
+      return true;
+    }
+
+    return false;
   }
+
 
 }
