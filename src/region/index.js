@@ -1,10 +1,10 @@
 
 module.exports.iran = {
-/**
- * 
- * @param {Number} code 
- * @returns 
- */
+    /**
+     * 
+     * @param {Number} code 
+     * @returns 
+     */
     checkNationalCode(code) {
         /* eslint-disable eqeqeq */
         const L = code.length
@@ -20,14 +20,29 @@ module.exports.iran = {
         return (s < 2 && c == s) || (s >= 2 && c == 11 - s)
         /* eslint-enable eqeqeq */
     },
+    /**
+     * 
+     * @param {Number} number 
+     * @returns 
+     */
     checkMobileNumber(number) {
         const regex = /^(\+98|0)?9\d{9}$/
         const result = regex.test(number)
         return result
     },
+    /**
+     * 
+     * @param {Number} number 
+     * @returns 
+     */
     normalizeMobileNumber(number) {
         return number.split('').reverse().join('').slice(0, 10).concat('0').split('').reverse().join('')
     },
+    /**
+     * 
+     * @param {String} name 
+     * @returns 
+     */
     nameOptimizer(name) {
         function regex(str) {
             return new RegExp(str)
