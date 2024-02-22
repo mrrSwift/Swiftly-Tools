@@ -1,4 +1,3 @@
-
 module.exports = {
     /** 
     *@param offset Number of page
