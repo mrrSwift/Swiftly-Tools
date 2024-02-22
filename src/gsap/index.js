@@ -1,8 +1,8 @@
 module.exports = {
-/**
- * @description Objects ready to use for animations
- */
-    from:{
+    /**
+     * @description Objects ready to use for animations
+     */
+    from: {
         fadeFromBottom: {
             y: 180,
             opacity: 0,
@@ -24,7 +24,7 @@ module.exports = {
         },
         fadeScaleIn: {
             opacity: 0,
-            scale:0
+            scale: 0
         },
         rotateUp: {
             y: 180,
@@ -49,166 +49,166 @@ module.exports = {
      * @param {Object} defaults Default data for gsap if you want
      * @returns Object for use in gsap
      */
-    anime(defaults = {}){
+    anime(defaults = {}) {
         let obj = defaults;
-/**
- * 
- * @param {Number} v 
- */
-        obj.x = (v)=>{
+        /**
+         * 
+         * @param {Number} v 
+         */
+        obj.x = (v) => {
             obj.x = v;
             return obj;
         }
-/**
- * 
- * @param {Number} v 
- */
-        obj.y = (v)=>{
+        /**
+         * 
+         * @param {Number} v 
+         */
+        obj.y = (v) => {
             obj.y = v;
             return obj;
         }
-/**
- * 
- * @param {Number} v 
- */
-        obj.rotation = (v)=>{
+        /**
+         * 
+         * @param {Number} v 
+         */
+        obj.rotation = (v) => {
             obj.rotation = v;
             return obj;
         }
-/**
- * 
- * @param {String} v 
- */
-        obj.ease = (v)=>{
+        /**
+         * 
+         * @param {String} v 
+         */
+        obj.ease = (v) => {
             obj.ease = v;
             return obj;
         }
-/**
- * 
- * @param {Number} v 
- */
-        obj.delay = (v)=>{
+        /**
+         * 
+         * @param {Number} v 
+         */
+        obj.delay = (v) => {
             obj.delay = v;
             return obj;
         }
-/**
- * 
- * @param {Number} v 
- */
-        obj.duration = (v)=>{
+        /**
+         * 
+         * @param {Number} v 
+         */
+        obj.duration = (v) => {
             obj.duration = v;
             return obj;
         }
-/**
- * 
- * @param {any} v | The value can be true or false, or it can be represented by 1 or 0.
- */
-        obj.stagger = (v)=>{
+        /**
+         * 
+         * @param {any} v | The value can be true or false, or it can be represented by 1 or 0.
+         */
+        obj.stagger = (v) => {
             obj.stagger = v;
             return obj;
         }
-/**
- * 
- * @param {Number} v 
- */
-        obj.scale = (v)=>{
+        /**
+         * 
+         * @param {Number} v 
+         */
+        obj.scale = (v) => {
             obj.scale = v;
             return obj;
         }
-/**
- * 
- * @param {Hex} v 
- */
-        obj.backgroundColor = (v)=>{
+        /**
+         * 
+         * @param {Hex} v 
+         */
+        obj.backgroundColor = (v) => {
             obj.backgroundColor = v;
             return obj;
         }
         return obj;
     },
-        /**
-     * 
-     * @param {Object} defaults Default data for gsap if you want
-     * @returns Object for use in gsap scrollTrigger
-     */
-    scrollTrigger(defaults = {}){
-        let obj = defaults;
-/**
+    /**
  * 
- * @param {any} v | The class or id of element
- * @returns 
+ * @param {Object} defaults Default data for gsap if you want
+ * @returns Object for use in gsap scrollTrigger
  */
-        obj.trigger = (v)=>{
+    scrollTrigger(defaults = {}) {
+        let obj = defaults;
+        /**
+         * 
+         * @param {any} v | The class or id of element
+         * @returns 
+         */
+        obj.trigger = (v) => {
             obj.trigger = v;
             return obj;
         }
-/**
- * 
- * @param {any} v | The value can be true or false, or it can be represented by 1 or 0.
- */
-        obj.pin = (v)=>{
+        /**
+         * 
+         * @param {any} v | The value can be true or false, or it can be represented by 1 or 0.
+         */
+        obj.pin = (v) => {
             obj.pin = v;
             return obj;
         }
-/**
- * 
- * @param {any} v | The class or id of element
- * @returns 
- */
-        obj.start = (v)=>{
+        /**
+         * 
+         * @param {any} v | The class or id of element
+         * @returns 
+         */
+        obj.start = (v) => {
             obj.start = v;
             return obj;
         }
-/**
- * 
- * @param {any} v | The value can be true or false, or it can be represented by 1 or 0.
- */
-        obj.scrub = (v)=>{
+        /**
+         * 
+         * @param {any} v | The value can be true or false, or it can be represented by 1 or 0.
+         */
+        obj.scrub = (v) => {
             obj.scrub = v;
             return obj;
         }
-/**
- * 
- * @param {any} v | The value can be true or false, or it can be represented by 1 or 0.
- */
-        obj.markers = (v)=>{
+        /**
+         * 
+         * @param {any} v | The value can be true or false, or it can be represented by 1 or 0.
+         */
+        obj.markers = (v) => {
             obj.markers = v;
             return obj;
         }
-/**
- * 
- * @param {any} v | The value can be true or false, or it can be represented by 1 or 0.
- */
-        obj.once = (v)=>{
+        /**
+         * 
+         * @param {any} v | The value can be true or false, or it can be represented by 1 or 0.
+         */
+        obj.once = (v) => {
             obj.once = v;
             return obj;
         }
-/**
- * 
- * @param {String} v 
- */
-        obj.toggleActions = (v)=>{
+        /**
+         * 
+         * @param {String} v 
+         */
+        obj.toggleActions = (v) => {
             obj.toggleActions = v;
             return obj;
         }
-/**
- * 
- * @param {any} v 
- * @returns 
- */
-        obj.end = (v)=>{
+        /**
+         * 
+         * @param {any} v 
+         * @returns 
+         */
+        obj.end = (v) => {
             obj.end = v;
             return obj;
         }
-/**
- * 
- * @param {any} v 
- * @returns 
- */
-        obj.snap = (v)=>{
+        /**
+         * 
+         * @param {any} v 
+         * @returns 
+         */
+        obj.snap = (v) => {
             obj.snap = v;
             return obj;
         }
-        
+
 
     }
 
