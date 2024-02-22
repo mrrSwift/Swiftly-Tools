@@ -84,6 +84,11 @@ module.exports = {
             obj.scale = v;
             return obj;
         }
+
+        obj.backgroundColor = (v)=>{
+            obj.backgroundColor = v;
+            return obj;
+        }
         return obj;
     },
     scrollTrigger(defaults = {}){
