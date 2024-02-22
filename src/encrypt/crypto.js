@@ -5,13 +5,13 @@ module.exports.crypto = {
     algoList() {
         return algo
     },
-/** 
-*@param secret 
-*@param string Data you want to encrypt
-*@param algo By default is 'aes-256-cbc'
-*@return Encrypted string
-*/
-    encrypt(secret = "df15g418fyt54e1f8er", string="", algo = 'aes-256-cbc') {
+    /** 
+    *@param secret 
+    *@param string Data you want to encrypt
+    *@param algo By default is 'aes-256-cbc'
+    *@return Encrypted string
+    */
+    encrypt(secret = "df15g418fyt54e1f8er", string = "", algo = 'aes-256-cbc') {
 
         const key = crypto.scryptSync(secret, 'salt', 32);
         const iv = Buffer.alloc(16, 0);
@@ -21,13 +21,13 @@ module.exports.crypto = {
 
 
     },
-/** 
-*@param secret secret you use to encrypt your data
-*@param string Data you want to decrypt
-*@param algo By default is 'aes-256-cbc'
-*@return Encrypted string
-*/
-    decrypt(secret= "df15g418fyt54e1f8er", string="", algo = 'aes-256-cbc') {
+    /** 
+    *@param secret secret you use to encrypt your data
+    *@param string Data you want to decrypt
+    *@param algo By default is 'aes-256-cbc'
+    *@return Encrypted string
+    */
+    decrypt(secret = "df15g418fyt54e1f8er", string = "", algo = 'aes-256-cbc') {
         const key = crypto.scryptSync(secret, 'salt', 32);
         const iv = Buffer.alloc(16, 0);
         const decipher = crypto.createDecipheriv(algo, key, iv);
