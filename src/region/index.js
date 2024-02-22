@@ -1,5 +1,10 @@
 
 module.exports.iran = {
+/**
+ * 
+ * @param {Number} code 
+ * @returns 
+ */
     checkNationalCode(code) {
         /* eslint-disable eqeqeq */
         const L = code.length
