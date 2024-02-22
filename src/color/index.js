@@ -15,7 +15,7 @@ module.exports.color = {
 *@param b value of blue. range of 0 - 255
 *@return string of hex code start with #
 */
-    rgbToHex(r = 0, g= 0, b= 0) {
+    rgbToHex(r = 0, g = 0, b = 0) {
         return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
 
     },
