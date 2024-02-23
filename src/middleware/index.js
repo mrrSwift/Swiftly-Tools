@@ -9,10 +9,10 @@ function getLogFileName() {
 }
 
 // Function to write log message with timestamp to the file
-function writeToLogFile(logMessage) {
+function writeToLogFile(folderName, logMessage) {
     const logFileName = getLogFileName();
-    const logFilePath = path.join(__dirname, logFileName); // Assuming logs are saved in the current directory
-
+    const logFilePath = path.join(__dirname, folderName, logFileName); // Assuming logs are saved in the current directory
+    const timestamp = new Date().toISOString();
     // Construct log data with timestamp
     const logData = `${timestamp}: ${logMessage}\n`;
 
@@ -85,12 +85,12 @@ module.exports.middleware = {
                             if (mkdirErr) {
                                 console.error('Error creating folder:', mkdirErr);
                             } else {
-                                writeToLogFile(logs)
+                                writeToLogFile(folderName, logs)
                                 next()
                             }
                         });
                     } else {
-                        writeToLogFile(logs)
+                        writeToLogFile(folderName, logs)
                         next()
                     }
                 });
