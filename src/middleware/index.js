@@ -14,7 +14,7 @@ function writeToLogFile(folderName, logMessage) {
     const logFilePath = path.join(__dirname, folderName, logFileName); // Assuming logs are saved in the current directory
     const timestamp = new Date().toISOString();
     // Construct log data with timestamp
-    const logData = `${timestamp}: ${logMessage}\n`;
+    const logData = `${cl.console(timestamp, "fgGreen")}: ${logMessage}\n`;
 
     // Write log data to the file
     fs.writeFile(logFilePath, logData, { encoding: 'utf8', flag: 'a' }, (err) => {
@@ -72,8 +72,8 @@ module.exports.middleware = {
         return (req, res, next) => {
             const timestamp = new Date().toISOString();
 
-            let logs = timestamp + ": " + req.method + " - " + req.headers + " IP: " + req.ip + " - " + req.originalUrl;
-            let logsConsole = cl.console(timestamp, "fgGreen") + ": " + cl.console(req.method, "fgRed") + " - " + cl.console(req.headers, "fgBlue") + " IP: " + cl.console(req.ip, "fgBlue") + " - " + cl.console(req.originalUrl, "fgRed");
+            let logs =    req.method + " - " + req.headers + " IP: " + req.ip + " - " + req.originalUrl;
+            let logsConsole =  cl.console(req.method, "fgRed") + " - " + cl.console(req.headers, "fgBlue") + " IP: " + cl.console(req.ip, "fgBlue") + " - " + cl.console(req.originalUrl, "fgRed");
             if (file) {
                 const folderName = 'logs';
 

@@ -143,7 +143,7 @@ module.exports.utils = {
      */
   logger(data) {
 
-        const timestamp = new Date().toISOString();
+      
 
         
             const folderName = 'logs';
@@ -156,12 +156,12 @@ module.exports.utils = {
                         if (mkdirErr) {
                             console.error('Error creating folder:', mkdirErr);
                         } else {
-                            writeToLogFile(timestamp+ " " +data)
+                            writeToLogFile(data)
 
                         }
                     });
                 } else {
-                    writeToLogFile(timestamp+ " " +data)
+                    writeToLogFile(data)
 
                 }
             });
