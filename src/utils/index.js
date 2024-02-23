@@ -1,3 +1,27 @@
+function getLogFileName() {
+  const now = new Date();
+  const dateString = now.toISOString().slice(0, 10); // Get date string in yyyy-mm-dd format
+  return `logs_${dateString}.log`;
+}
+
+// Function to write log message with timestamp to the file
+function writeToLogFile(logMessage) {
+  const logFileName = getLogFileName();
+  const logFilePath = path.join(__dirname, logFileName); // Assuming logs are saved in the current directory
+
+  // Construct log data with timestamp
+  const logData = `${timestamp}: ${logMessage}\n`;
+
+  // Write log data to the file
+  fs.writeFile(logFilePath, logData, { encoding: 'utf8', flag: 'a' }, (err) => {
+      if (err) {
+          console.error('Error writing to log file:', err);
+      } else {
+          console.log('Log message appended to file:', logFileName);
+      }
+  });
+}
+
 module.exports.utils = {
   /**
    * 
@@ -114,15 +138,14 @@ module.exports.utils = {
   },
   /**
      * 
-     * @param {Boolean} file If true create folder and save log on there
      * @param { String } data
-     * @returns Auto log per request
+     * @description Creates a new folder with the name logs and saves the related logs
      */
-  logger(data, file = false) {
+  logger(data) {
 
         const timestamp = new Date().toISOString();
 
-        if (file) {
+        
             const folderName = 'logs';
 
             // Check if the folder exists
@@ -133,19 +156,16 @@ module.exports.utils = {
                         if (mkdirErr) {
                             console.error('Error creating folder:', mkdirErr);
                         } else {
-                            writeToLogFile(data)
+                            writeToLogFile(timestamp+ " " +data)
 
                         }
                     });
                 } else {
-                    writeToLogFile(data)
+                    writeToLogFile(timestamp+ " " +data)
 
                 }
             });
-        } else {
-            console.log(data)
-
-        }
+       
 
     
 }
