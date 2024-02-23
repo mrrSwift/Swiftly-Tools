@@ -86,17 +86,17 @@ module.exports.middleware = {
                                 console.error('Error creating folder:', mkdirErr);
                             } else {
                                 writeToLogFile(logs)
-
+                                next()
                             }
                         });
                     } else {
                         writeToLogFile(logs)
-
+                        next()
                     }
                 });
             } else {
                 console.log(logsConsole)
-
+                next()
             }
 
         }

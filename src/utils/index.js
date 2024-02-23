@@ -111,6 +111,43 @@ module.exports.utils = {
     } else {
       return null
     }
-  }
+  },
+  /**
+     * 
+     * @param {Boolean} file If true create folder and save log on there
+     * @param { String } data
+     * @returns Auto log per request
+     */
+  logger(data, file = false) {
+
+        const timestamp = new Date().toISOString();
+
+        if (file) {
+            const folderName = 'logs';
+
+            // Check if the folder exists
+            fs.access(folderName, fs.constants.F_OK, (err) => {
+                if (err) {
+                    // Folder does not exist, create it
+                    fs.mkdir(folderName, (mkdirErr) => {
+                        if (mkdirErr) {
+                            console.error('Error creating folder:', mkdirErr);
+                        } else {
+                            writeToLogFile(data)
+
+                        }
+                    });
+                } else {
+                    writeToLogFile(data)
+
+                }
+            });
+        } else {
+            console.log(data)
+
+        }
+
+    
+}
 
 }
