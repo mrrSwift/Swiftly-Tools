@@ -1,6 +1,6 @@
 {
   "name": "swiftly-tools",
-  "version": "1.2.73",
+  "version": "1.2.8",
   "description": "A complete tool to shorten code and speed up your coding, all in one",
   "main": "index.js",
   "scripts": {
