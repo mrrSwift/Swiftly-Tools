@@ -28,7 +28,7 @@ function getLogFileName() {
 
  const logger= (data) => {
 
-    const timestamp = new Date().toISOString();
+
 
     
         const folderName = 'logs';
@@ -41,12 +41,12 @@ function getLogFileName() {
                     if (mkdirErr) {
                         console.error('Error creating folder:', mkdirErr);
                     } else {
-                        writeToLogFile(folderName,timestamp+ " " +data)
+                        writeToLogFile(folderName,data)
 
                     }
                 });
             } else {
-                writeToLogFile(folderName,timestamp+ " " +data)
+                writeToLogFile(folderName,data)
 
             }
         });
