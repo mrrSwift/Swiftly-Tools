@@ -25,6 +25,7 @@ Can be used in express, vue, react, gsap, mongoose and any web app
   - cors
   - hsts
   - sign
+  - logger
 - number
   - generateRandomDigitsInRangeOf
   - generateRandomDigits
@@ -66,6 +67,7 @@ Can be used in express, vue, react, gsap, mongoose and any web app
     - format
     - prefix
     - postfix
+  - logger
 - region
   - iran
     - checkNationalCode
