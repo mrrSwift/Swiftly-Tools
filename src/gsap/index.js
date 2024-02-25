@@ -43,6 +43,23 @@ module.exports = {
             rotation: 20,
             opacity: 0,
         },
+        rotateDown: {
+            y: -180,
+            rotation: 10,
+            opacity: 0,
+        },
+        rotateDownRight: {
+            y: -180,
+            x: -180,
+            rotation: -20,
+            opacity: 0,
+        },
+        rotateDownLeft: {
+            y: -180,
+            x: 180,
+            rotation: 20,
+            opacity: 0,
+        },
     },
     /**
      * 
