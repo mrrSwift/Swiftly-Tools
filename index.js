@@ -16,6 +16,8 @@ const { iran } = require('./src/region');
 const gsap = require('./src/gsap');
 const nav = require('./src/nav');
 const rs = require('./src/response');
+const {autoFetch} = require('express-route-detector');
+
 /**
  * @author Mr Swift
  * @name Swiftly
@@ -27,6 +29,7 @@ const rs = require('./src/response');
  *  object | utils | region | countries | gsap
  */
 module.exports = {
+    autoFetch,
     color,
     badWords,
     bcrypt,
