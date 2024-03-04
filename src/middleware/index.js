@@ -14,7 +14,7 @@ function writeToLogFile(folderName, logMessage) {
     const logFilePath = path.join("./", folderName, logFileName); // Assuming logs are saved in the current directory
     const timestamp = new Date().toISOString();
     // Construct log data with timestamp
-    const logData = `${cl.console(timestamp, "fgGreen")}: ${logMessage}\n`;
+    const logData = `${timestamp}: ${logMessage}\n`;
 
     // Write log data to the file
     fs.writeFile(logFilePath, logData, { encoding: 'utf8', flag: 'a' }, (err) => {
