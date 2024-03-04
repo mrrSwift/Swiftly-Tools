@@ -7,7 +7,7 @@ function getLogFileName() {
 // Function to write log message with timestamp to the file
 function writeToLogFile(logMessage) {
   const logFileName = getLogFileName();
-  const logFilePath = path.join(__dirname, logFileName); // Assuming logs are saved in the current directory
+  const logFilePath = path.join("./", logFileName); // Assuming logs are saved in the current directory
   const timestamp = new Date().toISOString();
   // Construct log data with timestamp
   const logData = `${timestamp}: ${logMessage}\n`;
