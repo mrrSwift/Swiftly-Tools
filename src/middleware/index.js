@@ -21,7 +21,7 @@ function writeToLogFile(folderName, logMessage) {
         if (err) {
             console.error('Error writing to log file:', err);
         } else {
-            console.log('Log message appended to file:', logFileName);
+
         }
     });
 }
@@ -72,8 +72,8 @@ module.exports.middleware = {
         return (req, res, next) => {
             const timestamp = new Date().toISOString();
 
-            let logs =    req.method + " - " + req.headers + " IP: " + req.ip + " - " + req.originalUrl;
-            let logsConsole =  cl.console(req.method, "fgRed") + " - " + cl.console(req.headers, "fgBlue") + " IP: " + cl.console(req.ip, "fgBlue") + " - " + cl.console(req.originalUrl, "fgRed");
+            let logs = req.method + " - " + req.headers + " IP: " + req.ip + " - " + req.originalUrl;
+            let logsConsole = cl.console(req.method, "fgRed") + " - " + cl.console(req.headers, "fgBlue") + " IP: " + cl.console(req.ip, "fgBlue") + " - " + cl.console(req.originalUrl, "fgRed");
             if (file) {
                 const folderName = 'logs';
 
@@ -86,11 +86,15 @@ module.exports.middleware = {
                                 console.error('Error creating folder:', mkdirErr);
                             } else {
                                 writeToLogFile(folderName, logs)
+                                console.log(logsConsole)
+
                                 next()
                             }
                         });
                     } else {
                         writeToLogFile(folderName, logs)
+                        console.log(logsConsole)
+
                         next()
                     }
                 });
