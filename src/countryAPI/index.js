@@ -11,10 +11,6 @@ module.exports.state = ()=>{
     return state
 }
 
-module.exports.city = ()=>{
-    return city
-}
-
 module.exports.iranCities = ()=>{
     return iranCities
 }

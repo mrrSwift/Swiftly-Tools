@@ -1,6 +1,6 @@
 const { color } = require('./src/color');
 const { badWords } = require('./src/badWords');
-const { country, state, city, iranCities } = require('./src/countryAPI');
+const { country, state, iranCities } = require('./src/countryAPI');
 const { expressValidation } = require('./src/express-validator');
 const { middleware } = require('./src/middleware');
 const { number } = require('./src/number');
@@ -51,13 +51,9 @@ module.exports = {
         state() {
             return state()
         },
-        city() {
-            return city()
-        },
         iranCities() {
             return iranCities()
         }
-
     },
      /**
      * @description express response with status
