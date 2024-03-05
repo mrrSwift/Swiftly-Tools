@@ -1,6 +1,5 @@
 const country = require('./country.json')
 const state = require('./state.json')
-const city = require('./city.json')
 const {iranCities} = require('./iranCity')
 
 module.exports.country = ()=>{
