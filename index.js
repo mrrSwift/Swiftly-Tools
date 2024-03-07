@@ -16,7 +16,7 @@ const { iran } = require('./src/region');
 const gsap = require('./src/gsap');
 const nav = require('./src/nav');
 const rs = require('./src/response');
-const {autoFetch} = require('express-route-detector');
+const { autoFetch } = require('express-route-detector');
 
 /**
  * @author Mr Swift
