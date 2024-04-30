@@ -142,10 +142,6 @@ module.exports.utils = {
      * @description Creates a new folder with the name logs and saves the related logs
      */
   logger(data) {
-
-      
-
-        
             const folderName = 'logs';
 
             // Check if the folder exists
@@ -157,12 +153,10 @@ module.exports.utils = {
                             console.error('Error creating folder:', mkdirErr);
                         } else {
                             writeToLogFile(data)
-
                         }
                     });
                 } else {
                     writeToLogFile(data)
-
                 }
             });
        
