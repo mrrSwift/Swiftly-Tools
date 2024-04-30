@@ -13,155 +13,150 @@ function writeToLogFile(logMessage) {
   const logData = `${timestamp}: ${logMessage}\n`;
 
   // Write log data to the file
-  fs.writeFile(logFilePath, logData, { encoding: 'utf8', flag: 'a' }, (err) => {
-      if (err) {
-          console.error('Error writing to log file:', err);
-      } else {
-          console.log('Log message appended to file:', logFileName);
-      }
+  fs.writeFile(logFilePath, logData, { encoding: "utf8", flag: "a" }, (err) => {
+    if (err) {
+      console.error("Error writing to log file:", err);
+    } else {
+      console.log("Log message appended to file:", logFileName);
+    }
   });
 }
 
 module.exports.utils = {
   /**
-   * 
-   * @param {Number} msTime 
+   *
+   * @param {Number} msTime
    * @description Create wait to your code
-   * @async 
+   * @async
    */
   sleep(msTime = 1000) {
-    new Promise(_ => setTimeout(_, msTime))
+    new Promise((_) => setTimeout(_, msTime));
   },
   log(string) {
-    console.log(string)
+    console.log(string);
   },
   /**
-   * 
-   * @param {Number} c 
+   *
+   * @param {Number} c
    * @returns Fahrenheit degree
    */
   celsiusToFahrenheit(c) {
-    return c * 9 / 5 + 32;
+    return (c * 9) / 5 + 32;
   },
   /**
-   * 
-   * @param {Number} f 
+   *
+   * @param {Number} f
    * @returns Celsius degree
    */
   fahrenheitToCelsius(f) {
-    return (f - 32) * 5 / 9;
+    return ((f - 32) * 5) / 9;
   },
   /**
-   * 
-   * @param {*} input 
+   *
+   * @param {*} input
    */
   currency(input) {
-    if (typeof input === 'string') {
+    if (typeof input === "string") {
       return {
         /**
-         * 
-         * @param {String} separator 
+         *
+         * @param {String} separator
          * @returns String of number separated by input
          */
         format(separator = ",") {
           return input.replace(/\B(?=(\d{3})+(?!\d))/g, separator);
         },
         /**
-         * 
-         * @param {String} symb 
-         * @param {Boolean} format 
+         *
+         * @param {String} symb
+         * @param {Boolean} format
          * @returns String with prefix
          */
         prefix(symb, format = false) {
           if (format) {
             return symb + input.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
           } else {
-            return symb + input
+            return symb + input;
           }
         },
         /**
-         * 
-         * @param {String} symb 
-         * @param {Boolean} format 
+         *
+         * @param {String} symb
+         * @param {Boolean} format
          * @returns String with postfix
          */
         postfix(symb, format = false) {
           if (format) {
-            return input.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " " + symb
+            return input.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " " + symb;
           } else {
-            return input + " " + symb
+            return input + " " + symb;
           }
-        }
-
+        },
       };
-    } else if (typeof input === 'number') {
+    } else if (typeof input === "number") {
       let number = input.toString();
       return {
         /**
-         * 
-         * @param {String} separator 
+         *
+         * @param {String} separator
          * @returns String of number separated by input
          */
         format(separator = ",") {
           return number.replace(/\B(?=(\d{3})+(?!\d))/g, separator);
         },
         /**
-         * 
-         * @param {String} symb 
-         * @param {Boolean} format 
+         *
+         * @param {String} symb
+         * @param {Boolean} format
          * @returns String with prefix
          */
         prefix(symb, format = false) {
           if (format) {
             return symb + number.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
           } else {
-            return symb + number
+            return symb + number;
           }
         },
         /**
-        * 
-        * @param {String} symb 
-        * @param {Boolean} format 
-        * @returns String with postfix
-        */
+         *
+         * @param {String} symb
+         * @param {Boolean} format
+         * @returns String with postfix
+         */
         postfix(symb, format = false) {
           if (format) {
-            return number.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " " + symb
+            return number.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " " + symb;
           } else {
-            return number + " " + symb
+            return number + " " + symb;
           }
-        }
+        },
       };
     } else {
-      return null
+      return null;
     }
   },
   /**
-     * 
-     * @param { String } data
-     * @description Creates a new folder with the name logs and saves the related logs
-     */
+   *
+   * @param { String } data
+   * @description Creates a new folder with the name logs and saves the related logs
+   */
   logger(data) {
-            const folderName = 'logs';
+    const folderName = "logs";
 
-            // Check if the folder exists
-            fs.access(folderName, fs.constants.F_OK, (err) => {
-                if (err) {
-                    // Folder does not exist, create it
-                    fs.mkdir(folderName, (mkdirErr) => {
-                        if (mkdirErr) {
-                            console.error('Error creating folder:', mkdirErr);
-                        } else {
-                            writeToLogFile(data)
-                        }
-                    });
-                } else {
-                    writeToLogFile(data)
-                }
-            });
-       
-
-    
-}
-
-}
+    // Check if the folder exists
+    fs.access(folderName, fs.constants.F_OK, (err) => {
+      if (err) {
+        // Folder does not exist, create it
+        fs.mkdir(folderName, (mkdirErr) => {
+          if (mkdirErr) {
+            console.error("Error creating folder:", mkdirErr);
+          } else {
+            writeToLogFile(data);
+          }
+        });
+      } else {
+        writeToLogFile(data);
+      }
+    });
+  },
+};
