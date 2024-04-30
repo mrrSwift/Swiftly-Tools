@@ -142,7 +142,7 @@ module.exports = {
         }
         return obj;
     },
-    /**
+/**
  * 
  * @param {Object} defaults Default data for gsap if you want
  * @returns Object for use in gsap scrollTrigger
@@ -225,8 +225,5 @@ module.exports = {
             obj.snap = v;
             return obj;
         }
-
-
     }
-
 }
