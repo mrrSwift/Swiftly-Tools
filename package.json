@@ -28,7 +28,6 @@
   "author": "Mr Swift",
   "license": "MIT",
   "dependencies": {
-    "bcrypt": "^5.1.1",
-    "express-route-detector": "^1.1.0"
+    "bcrypt": "^5.1.1"
   }
 }
